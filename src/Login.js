@@ -8,12 +8,12 @@ const Login = ({ onLogin, onNavigateToSignUp }) => {
     const [emailError, setEmailError] = useState('');
     const [passwordError, setPasswordError] = useState('');
 
-    const validateEmail = () => {
+    const validateEmail = (value = email) => {
         const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-        if (!email) {
+        if (!value) {
             setEmailError('Email is required');
             return false;
-        } else if (!emailRegex.test(email)) {
+        } else if (!emailRegex.test(value)) {
             setEmailError('Please enter a valid email address (name@domain.com)');
             return false;
         }
@@ -21,16 +21,26 @@ const Login = ({ onLogin, onNavigateToSignUp }) => {
         return true;
     };
 
-    const validatePassword = () => {
-        if (!password) {
+    const validatePassword = (value = password) => {
+        if (!value) {
             setPasswordError('Password is required');
             return false;
-        } else if (password.length < 8) {
+        } else if (value.length < 8) {
             setPasswordError('Password must be at least 8 characters long');
             return false;
         }
         setPasswordError('');
         return true;
+    };
+
+    const handleEmailChange = (e) => {
+        setEmail(e.target.value);
+        validateEmail(e.target.value);
+    };
+
+    const handlePasswordChange = (e) => {
+        setPassword(e.target.value);
+        validatePassword(e.target.value);
     };
 
     const handleSubmit = async (e) => {
@@ -123,8 +133,8 @@ const Login = ({ onLogin, onNavigateToSignUp }) => {
                             className="FormInput"
                             placeholder="Email Address"
                             value={email}
-                            onChange={(e) => setEmail(e.target.value)}
-                            onBlur={validateEmail}
+                            onChange={handleEmailChange}
+                            onBlur={() => validateEmail()}
                         />
                     </div>
                     {emailError && <div className="ErrorMessage">{emailError}</div>}
@@ -137,8 +147,8 @@ const Login = ({ onLogin, onNavigateToSignUp }) => {
                             className="FormInput"
                             placeholder="Password"
                             value={password}
-                            onChange={(e) => setPassword(e.target.value)}
-                            onBlur={validatePassword}
+                            onChange={handlePasswordChange}
+                            onBlur={() => validatePassword()}
                         />
                     </div>
                     {passwordError && <div className="ErrorMessage">{passwordError}</div>}

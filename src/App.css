@@ -231,10 +231,6 @@ td {
 
 /* Responsive adjustments */
 @media (max-width: 768px) {
-  .SignUpPage {
-    padding: 10px;
-  }
-
   table {
     display: block;
     overflow-x: auto;

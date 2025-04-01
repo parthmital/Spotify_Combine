@@ -9,14 +9,14 @@
   --black-transparent: rgba(0, 0, 0, 0.95);
 }
 
-body {
+/* body {
   margin: 0;
   min-height: 100vh;
   background: linear-gradient(180deg, rgba(0, 0, 0, 0.75) 0%, var(--black) 100%),
     linear-gradient(0deg, var(--accent-color) 0%, var(--accent-color) 100%);
   background-repeat: no-repeat;
   background-attachment: fixed;
-}
+} */
 
 ::-webkit-scrollbar {
   display: none;
@@ -50,6 +50,13 @@ body {
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
+
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.75) 0%, var(--black) 100%),
+    linear-gradient(0deg, var(--accent-color) 0%, var(--accent-color) 100%);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  min-height: 100vh;
+  margin: 0;
 }
 
 .Top,

@@ -10,7 +10,7 @@ function App() {
   const [currentUser, setCurrentUser] = useState(null);
   const [users, setUsers] = useState([
     { id: 1, email: 'admin@spotify.com', password: 'admin123', role: 'admin' },
-    { id: 2, email: 'user@spotify.com', password: 'user123', role: 'user' }
+    { id: 2, email: 'user@spotify.com', password: 'user1234', role: 'user' }
   ]);
 
   const AppRoutes = () => {
