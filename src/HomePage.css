@@ -553,7 +553,7 @@
   transition: fill 0.2s;
 }
 
-svg:not(.PlayButton svg, .PlayButton2 svg, .PlayButton3 svg, .PauseButton svg, .NavBarButtons svg, .HueSliderButton svg):hover {
+svg:not(.PlayButton svg, .PlayButton2 svg, .PlayButton3 svg, .PauseButton svg, .NavBarButtons svg, .HueSliderButton svg, .LogoutButton svg):hover {
   fill: var(--accent-color);
   stroke: var(--accent-color);
   transform: scale(1.1);
@@ -570,9 +570,10 @@ svg:not(.PlayButton svg, .PlayButton2 svg, .PlayButton3 svg, .PauseButton svg, .
 .Playlist:active,
 .NavBarButtons:active,
 .HueSliderButton:active,
+.LogoutButton:active,
 svg:active {
   transform: scale(0.95);
-  transition: transform 0.2s;
+  transition: all 0.2s;
 }
 
 .HueSliderButton {
@@ -585,9 +586,11 @@ svg:active {
   cursor: pointer;
 }
 
-.HueSliderButton:hover {
+.HueSliderButton:hover,
+.LogoutButton:hover {
   background: var(--bg-hover);
   transform: scale(1.1);
+  transition: all 0.2s;
 }
 
 .HueSliderButton:hover svg path {
@@ -646,6 +649,12 @@ svg:active {
 }
 
 .LogoutButton {
-  background: none;
+  display: flex;
+  padding: 8px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 100%;
+  background: var(--bg-light);
+  cursor: pointer;
   border: none;
 }
