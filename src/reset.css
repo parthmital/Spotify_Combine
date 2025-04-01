@@ -1,0 +1,11 @@
+/* reset.css */
+.auth-layout {
+    all: initial;
+    /* Reset all properties */
+    /* Add your auth-specific styles here */
+}
+
+.main-layout {
+    all: initial;
+    /* Homepage styles will be scoped via CSS modules */
+}

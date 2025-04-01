@@ -1,0 +1,95 @@
+/* src/AuthPages.css */
+.AuthPage {
+    max-width: 440px;
+    min-height: 100vh;
+    margin: 0 auto;
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 32px;
+    background: #121212;
+}
+
+.AuthHeader {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+    width: 100%;
+}
+
+.AuthHeading {
+    color: #fff;
+    text-align: center;
+    font-family: "Spotify Mix UI";
+    font-size: 32px;
+    font-weight: 700;
+    letter-spacing: 0.96px;
+    width: 100%;
+}
+
+.AuthFormContainer {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.AuthForm {
+    display: flex;
+    padding: 12px;
+    align-items: center;
+    gap: 12px;
+    width: 100%;
+    border-radius: 5px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.AuthForm:hover {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.AuthInput {
+    background: none;
+    border: none;
+    flex: 1;
+    color: white;
+    font-family: "Spotify Mix UI";
+    font-size: 14px;
+}
+
+.AuthButton {
+    display: flex;
+    padding: 12px 24px;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    width: 100%;
+    border-radius: 25px;
+    background: #1ed760;
+    border: none;
+    cursor: pointer;
+    color: #000;
+    font-weight: 700;
+}
+
+.AuthFooter {
+    display: flex;
+    justify-content: center;
+    gap: 4px;
+    width: 100%;
+}
+
+.AuthLink {
+    color: #1ed760;
+    cursor: pointer;
+    background: none;
+    border: none;
+    padding: 0;
+}
+
+.AuthLink:hover {
+    text-decoration: underline;
+}
