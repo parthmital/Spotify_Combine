@@ -30,6 +30,7 @@ body {
 }
 
 .HeadingText {
+  align-content: center;
   align-self: stretch;
   color: var(--Fg-Primary, #fff);
   text-align: center;
@@ -47,6 +48,7 @@ body {
 }
 
 .TextBold {
+  align-content: center;
   display: -webkit-box;
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 1;
